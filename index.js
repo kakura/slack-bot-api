@@ -18,7 +18,7 @@ function Bot(params, usewebsocket) {
     this.name = params.name;
 
     assert(params.token, 'token must be defined');
-    if(usewebsocket === undefined || usewebsockets == true){
+    if(usewebsocket === undefined || usewebsocket == true){
         this.login();
     }
 }
