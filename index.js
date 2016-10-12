@@ -10,14 +10,17 @@ var EventEmitter = require('events').EventEmitter;
 
 /**
  * @param {object} params
+ * @param bool usewebsocket 
  * @constructor
  */
-function Bot(params) {
+function Bot(params, usewebsocket) {
     this.token = params.token;
     this.name = params.name;
 
     assert(params.token, 'token must be defined');
-    this.login();
+    if(usewebsocket === undefined || usewebsockets == true){
+        this.login();
+    }
 }
 
 util.inherits(Bot, EventEmitter);
